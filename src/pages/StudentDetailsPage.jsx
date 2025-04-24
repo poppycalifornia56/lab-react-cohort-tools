@@ -1,9 +1,10 @@
 import placeholderImage from "./../assets/placeholder.png";
 import studentsData from "./../assets/students.json";
 import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 function StudentDetailsPage() {
-  const studentId = "1";
+  const { studentId } = useParams();
   const studentProfile = studentsData.find(
     (student) => student._id === studentId
   );
